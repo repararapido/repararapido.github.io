@@ -1,5 +1,3 @@
-repararapido
-aqui sao cenas
-### Small image
+Página em construção...
 
 ![imagem](thumbnail.png)
