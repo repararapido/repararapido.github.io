@@ -10,84 +10,131 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f5f5f5;
+            background: #f7f7f7;
             color: #333;
         }
 
-        /* Hero */
+        /* -------------------------------------------------------------
+           HERO
+        ------------------------------------------------------------- */
         .hero {
-            background: linear-gradient(135deg, #d97706, #f59e0b); /* amarelo torrado → laranja elegante */
+            background: linear-gradient(135deg, #f59e0b, #fbbf24);
             color: white;
-            padding: 40px 20px 50px 20px;
             text-align: center;
+            padding: 60px 20px 70px;
+        }
+        .hero img {
+            height: 70px;
+            margin-bottom: 18px;
         }
         .hero h1 {
-            font-size: 2.4rem;
-            margin-bottom: 10px;
+            font-size: 2.6rem;
+            margin: 0;
             font-weight: 700;
-            letter-spacing: -0.5px;
         }
-        
         .hero p {
-            font-size: 1.15rem;
+            margin-top: 10px;
+            font-size: 1.25rem;
             opacity: 0.95;
         }
-        .hero .cta {
+        .cta {
             margin-top: 25px;
-            background: #ffd60a;
-            padding: 12px 26px;
-            font-size: 1.1rem;
+            background: #ffeb3b;
+            padding: 12px 28px;
+            font-size: 1.15rem;
             color: #000;
-            border: none;
             border-radius: 6px;
-            cursor: pointer;
             text-decoration: none;
             display: inline-block;
+            font-weight: bold;
         }
 
-        /* Secção: serviços */
+        /* -------------------------------------------------------------
+           SECÇÕES
+        ------------------------------------------------------------- */
         .section {
             padding: 50px 20px;
-            text-align: center;
+            max-width: 1100px;
+            margin: auto;
         }
+        .section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: #111;
+        }
+
+        /* -------------------------------------------------------------
+           SERVIÇOS
+        ------------------------------------------------------------- */
         .services {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
         }
         .service-box {
             background: white;
             padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.08);
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        .service-box svg {
+            width: 42px;
+            height: 42px;
+            margin-bottom: 10px;
         }
         .service-box h3 {
+            margin-top: 5px;
             margin-bottom: 10px;
-            color: #0077b6;
+            color: #d97706;
+            font-size: 1.2rem;
+        }
+        .service-box p {
+            font-size: 0.95rem;
+            line-height: 1.4rem;
         }
 
-        /* Contacto */
+        /* -------------------------------------------------------------
+           CONTACTO
+        ------------------------------------------------------------- */
         .contact {
             background: #023e8a;
             color: white;
-            padding: 40px 20px;
-        }
-        .contact h2 {
-            margin-bottom: 20px;
+            padding: 50px 20px;
+            text-align: center;
         }
         .contact a {
             color: #ffd60a;
             font-weight: bold;
             text-decoration: none;
+            font-size: 1.15rem;
         }
 
-        /* Footer */
+        /* -------------------------------------------------------------
+           FAQ
+        ------------------------------------------------------------- */
+        .faq-item {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+        }
+        .faq-item h4 {
+            margin: 0 0 8px 0;
+            color: #d97706;
+        }
+
+        /* -------------------------------------------------------------
+           FOOTER
+        ------------------------------------------------------------- */
         footer {
-            text-align: center;
-            padding: 15px;
             background: #001219;
             color: white;
+            text-align: center;
+            padding: 15px;
             font-size: 0.9rem;
         }
     </style>
@@ -97,7 +144,7 @@
 
     <!-- Hero -->
 <section class="hero">
-    <img src="thumbnail.png" alt="Repara Rápido" style="height:256px; margin-bottom:5px;">
+    <img src="thumbnail.png" alt="Repara Rápido">
     <h1>Repara Rápido</h1>
     <p>Serviços de reparações domésticas rápidas, económicas e feitas com profissionalismo no concelho de Elvas.</p>
     <a class="cta" href="#contacto">Pedir Orçamento</a>
@@ -108,37 +155,85 @@
     <section class="section">
         <h3>Intervimos rapidamente em qualquer freguesia de Elvas.</h3>
         <h2>Serviços Prestados</h2>
+
         <div class="services">
+
+            <!-- CANALIZAÇÕES -->
             <div class="service-box">
+                <svg viewBox="0 0 24 24" fill="#3b82f6">
+                    <path d="M5 3h14v2H5V3zm2 4h10v2H7V7zm12 4v8a2 2 0 0 1-2 2h-2v-2h2v-8h-2v-2h2a2 2 0 0 1 2 2zM5 9h2v2H5v8h2v2H5a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2z"/>
+                </svg>
                 <h3>Canalizações</h3>
                 <p>Reparação de fugas, substituição de torneiras, sifões, autoclismos e muito mais.</p>
             </div>
+
+            <!-- ELETRICIDADE -->
             <div class="service-box">
+                <svg viewBox="0 0 24 24" fill="#facc15">
+                    <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/>
+                </svg>
                 <h3>Eletricidade</h3>
                 <p>Troca de tomadas, iluminação, disjuntores e deteção de avarias.</p>
             </div>
+
+            <!-- MONTAGENS -->
             <div class="service-box">
+                <svg viewBox="0 0 24 24" fill="#6b7280">
+                    <path d="M21 16v-2l-3-3-2 2 3 3h2zm-5.586-7.586l-2-2L4 15v2h2l9.414-9.414zM3 21h18v2H3z"/>
+                </svg>
                 <h3>Montagens</h3>
-                <p>Montagem de móveis IKEA, Leroy Merlin ou outros, suportes de TV, estantes e estruturas.</p>
+                <p>Montagem de móveis, suportes de TV, estantes e pequenas estruturas.</p>
             </div>
+
+            <!-- PINTURAS -->
             <div class="service-box">
-                <h3>Pequenas Reparações</h3>
-                <p>Portas, fechaduras, puxadores, silicone de casas de banho e cozinha.</p>
-            </div>
-            <div class="service-box">
+                <svg viewBox="0 0 24 24" fill="#fb5f34">
+                    <path d="M2 20h20v2H2v-2zm16-14V2H6v4H2v6h4v4h12v-4h4V6h-4z"/>
+                </svg>
                 <h3>Pinturas Interiores</h3>
-                <p>Renovação de paredes e tetos com acabamento profissional. Transformamos o interior da sua casa com pinturas perfeitas e sem preocupações. Toda a área é cuidadosamente protegida para que nada fique sujo ou danificado.</p>
+                <p>Pintura interior com proteção total — sem sujar o restante da habitação.</p>
             </div>
-            
+
+            <!-- PEQUENAS REPARAÇÕES -->
+            <div class="service-box">
+                <svg viewBox="0 0 24 24" fill="#9ca3af">
+                    <path d="M2 2l6 2 2 6-2 2 6 6 2-2 6 2-2 6H2V2z"/>
+                </svg>
+                <h3>Pequenas Reparações</h3>
+                <p>Portas, fechaduras, puxadores, silicone e pequenos arranjos domésticos.</p>
+            </div>
+
         </div>
     </section>
     
-    <!-- Localidades -->
-    <section class="section" id="area">
+    <!-- ÁREA DE ATUAÇÃO -->
+    <section class="section">
         <h2>Área de Atuação</h2>
-        <p>Realizamos serviços de reparações domésticas em todo o <strong>concelho de Elvas</strong>, incluindo:</p>
+        <p>Prestamos serviços em todo o <strong>concelho de Elvas</strong>, incluindo:</p>
         <p>Elvas (cidade), Vila Boim, Terrugem, Barbacena, São Vicente e Ventosa, Santa Eulália e zonas próximas.</p>
-        </section>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <h2>FAQ</h2>
+
+        <div class="faq-item">
+            <h4>Quais são os custos dos serviços?</h4>
+            <p>Fazemos orçamentos gratuitos e sem compromisso.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Qual é o tempo de resposta?</h4>
+            <p>Respondemos rapidamente, indicando disponibilidade e valor estimado.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Atendem urgências?</h4>
+            <p>Sim, sempre que possível deslocamo-nos no próprio dia.</p>
+        </div>
+
+    </section>
+
 
     <!-- Contacto -->
     <section class="contact" id="contacto">
