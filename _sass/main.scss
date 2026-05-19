@@ -1,0 +1,160 @@
+/* ==========================================================================
+   VARIÁVEIS DE CONFIGURAÇÃO (Altere as cores aqui)
+   ========================================================================== */
+$font-principal: Arial, sans-serif;
+$cor-fundo: #f7f7f7;
+$cor-texto: #333;
+$cor-texto-escura: #111;
+
+// Cores de Destaque (Laranja/Amarelo do Repara Rápido)
+$cor-destaque-1: #f59e0b;
+$cor-destaque-2: #fbbf24;
+$cor-destaque-tres: #d97706;
+$cor-cta: #ffeb3b;
+
+// Secções Especiais
+$cor-contacto-bg: #023e8a;
+$cor-contacto-link: #ffd60a;
+$cor-footer-bg: #001219;
+
+/* ==========================================================================
+   ESTILOS GERAIS
+   ========================================================================== */
+body {
+    margin: 0;
+    font-family: $font-principal;
+    background: $cor-fundo;
+    color: $cor-texto;
+}
+
+.section {
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: auto;
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 25px;
+        color: $cor-texto-escura;
+    }
+}
+
+/* ==========================================================================
+   COMPONENTE: HERO (Banner Principal)
+   ========================================================================== */
+.hero {
+    background: linear-gradient(135deg, $cor-destaque-1, $cor-destaque-2);
+    color: white;
+    text-align: center;
+    padding: 60px 20px 70px;
+
+    img {
+        height: 70px;
+        margin-bottom: 18px;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+        margin: 0;
+        font-weight: 700;
+    }
+
+    p {
+        margin-top: 10px;
+        font-size: 1.25rem;
+        opacity: 0.95;
+    }
+}
+
+.cta {
+    margin-top: 25px;
+    background: $cor-cta;
+    padding: 12px 28px;
+    font-size: 1.15rem;
+    color: #000;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   COMPONENTE: SERVIÇOS
+   ========================================================================== */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.service-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+
+    svg {
+        width: 42px;
+        height: 42px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        color: $cor-destaque-tres;
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.4rem;
+    }
+}
+
+/* ==========================================================================
+   COMPONENTE: CONTACTO
+   ========================================================================== */
+.contact {
+    background: $cor-contacto-bg;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+
+    a {
+        color: $cor-contacto-link;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.15rem;
+    }
+}
+
+/* ==========================================================================
+   COMPONENTE: FAQ
+   ========================================================================== */
+.faq-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+
+    h4 {
+        margin: 0 0 8px 0;
+        color: $cor-destaque-tres;
+    }
+}
+
+/* ==========================================================================
+   COMPONENTE: FOOTER
+   ========================================================================== */
+footer {
+    background: $cor-footer-bg;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
